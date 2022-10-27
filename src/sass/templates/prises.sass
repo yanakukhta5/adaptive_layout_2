@@ -1,0 +1,93 @@
+.prises
+ &-cards
+  width: 100%
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: $sm)
+   flex-direction: column
+
+ &-card
+  height: fit-content
+  flex: 0 1 30%
+  color: $secondary
+  background-color: $primary
+  margin-bottom: 20px
+  @media screen and (max-width: $md)
+   flex: 0 1 45%
+  @media screen and (max-width: $sm)
+   flex: unset
+  &:last-child
+   margin-right: 0
+  &__3
+   @media screen and (max-width: $md)
+    display: none
+   @media screen and (max-width: $sm)
+    display: block
+
+  &__title
+   display: block
+   padding: 36px 30px !important
+  
+  &__section
+   padding: 18px 30px
+   border-bottom: 1px $secondary solid
+   margin: auto
+   & p
+    font-family: 'Boldh'
+    font-size: 20px
+    color: $secondary
+    margin-bottom: 0
+
+  &__prise
+   padding: 58px 30px 50px 30px
+   background-color: $primary
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+
+  &__list
+   list-style-type: disc !important
+   & li
+    list-style-position: inside
+    display: list-item
+    font-size: 16px
+    color: $secondary
+
+  &__img
+   width: 100%
+   &_wrapper
+    width: 100%
+
+  &__price
+   display: grid
+   grid-template-columns: repeat(2, 50%)
+   padding: 40px 30px
+
+
+.price
+ &-from
+  font-family: LightH !important
+  color: $secondary
+  opacity: 0.5
+  font-size: 16px
+ &-start
+  font-family: LightH !important
+  color: $secondary
+  & span
+   font-family: LightH !important
+   font-size: 40px
+   &::after
+    content: ' $'
+    font-size: 16px
+ &-button
+  font-family: Boldh
+  width: 100%
+  height: 100%
+  background-color: $secondary
+  color: $primary
+  border: 0
+  font-size: 20px
+  cursor: pointer
+  &::before
+   display: none
+
+ 

@@ -1,0 +1,175 @@
+.main
+ margin-top: 0px
+
+ &-img
+  width: 90%
+  position: relative
+  z-index: 2
+  margin-top: 20%
+  @media screen and (max-width: $md)
+   top: -40px
+   left: -20px
+
+ &-text
+  justify-self: flex-end
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  @media screen and (max-width: $md)
+   width: 100%
+ &-images
+  width: 100%
+  position: relative
+  &::after
+   content: ''
+   width: 100%
+   position: absolute
+   left: 0
+   top: 0
+   background-image: url('../img/main/main-img__decor.png')
+   background-size: contain
+   height: 100%
+   z-index: 1
+   background-repeat: no-repeat
+ &-top
+  display: grid
+  grid-template-columns: 50% 50%
+  @media screen and (max-width: $sm)
+   grid-template-columns: 1fr
+   grid-auto-flow: row
+ &-title
+  font-size: 80px
+  width: min-content
+  text-align: right
+  @media screen and (max-width: $lg)
+   font-size: 65px
+  @media screen and (max-width: $md)
+   font-size: 50px
+   margin-top: -50px
+   text-align: right
+  @media screen and (max-width: $sm)
+   font-size: 36px
+  &__vertical
+   writing-mode: vertical-lr
+   transform: scale(-1)
+   display: flex
+   align-self: end
+   margin-right: 35px
+   position: relative
+   @media screen and (max-width: $x)
+    top: -40px
+   @media screen and (max-width: $lg)
+    top: -70px
+    margin-right: 20px
+   @media screen and (max-width: 850px)
+    top: 0px
+   @media screen and (max-width: $sm)
+    font-size: 40px
+    height: 100%
+    place-content: flex-end
+    margin-right: 10px
+    top: 0
+ &-bottom
+  display: grid
+  grid-template-columns: 50% 45%
+  justify-content: space-between
+  @media screen and (max-width: $md)
+   grid-template-columns: 1fr
+   grid-auto-flow: row
+  &__text
+   display: flex
+   flex-direction: column
+  &__li
+   margin-bottom: 10px
+   margin-left: 60px
+   list-style-type: disc
+   &::before
+    content: ''
+    width: 60px
+    height: 1px
+    background-color: $primary
+    display: inline-block
+    position: relative
+    opacity: 0.5
+    top: -5px
+    left: -13px
+    @media screen and (max-width: $sm)
+     top: -3px
+
+  &__ul
+   margin-top: 60px
+   @media screen and (max-width: $md)
+    margin: 30px
+   @media screen and (max-width: $sm)
+    margin: 5px 0px 10px 0px
+   
+ &-ul
+  margin: 48px 0px 60px 0px
+  @media screen and (max-width: $sm)
+   margin: 30px 0px 50px 0px
+   width: 100%
+   display: flex
+   flex-direction: column
+
+ &-li
+  width: fit-content
+  margin: 0 0 16px auto
+  &::after
+   content: ''
+   background-image: url(../img/svg/monoColor/top-li__decor.svg)
+   background-repeat: no-repeat
+   background-position: center
+   width: 12px
+   height: 12px
+   color: transparent
+   padding-left: 30px
+  @media screen and (max-width: $md)
+   display: flex
+   flex-direction: row-reverse
+   align-items: center
+  @media screen and (max-width: $sm)
+   margin: 0 0 20px 0px
+ 
+ &-description
+  display: flex
+  @media screen and (max-width: $sm)
+   height: 260px
+
+ &-subtitle
+  font-size: 50px
+  margin-bottom: 30px
+  @media screen and (max-width: 850px)
+   font-size: 25px
+  @media screen and (max-width: $sm)
+   font-size: 24px
+   margin-bottom: 20px
+
+ &-command
+  position: relative
+  z-index: 2
+  @media screen and (max-width: $md)
+   height: 100%
+  @media screen and (max-width: $sm)
+   width: 100%
+   height: unset
+  &__wrapper
+   position: relative
+   overflow: hidden
+   @media screen and (max-width: $md)
+    overflow: hidden
+    justify-self: center
+    width: 90%
+   @media screen and (max-width: $sm)
+    height: 270px
+   &::before
+    content: ''
+    width: 100%
+    height: 100%
+    background-image: url('../img/main/main-command__decor.png')
+    background-repeat: no-repeat
+    position: absolute
+    right: -123px
+    bottom: -90px
+    z-index: 1
+    @media screen and (max-width: $x)
+     display: none

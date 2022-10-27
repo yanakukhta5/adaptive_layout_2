@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Boldh';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local(''),
+	url("../font/BoldH.woff2") format("woff2"),
+	url("../font/BoldH.woff") format("woff");
+}
+@font-face {
+	font-family: 'Bolditalic';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: local(''),
+	url("../font/Bolditalic.woff2") format("woff2"),
+	url("../font/Bolditalic.woff") format("woff");
+}
+@font-face {
+	font-family: 'Lighth';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: local(''),
+	url("../font/LightH.woff2") format("woff2"),
+	url("../font/LightH.woff") format("woff");
+}
+@font-face {
+	font-family: 'Lightitalic';
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: local(''),
+	url("../font/Lightitalic.woff2") format("woff2"),
+	url("../font/Lightitalic.woff") format("woff");
+}
+@font-face {
+	font-family: 'Mediumh';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: local(''),
+	url("../font/MediumH.woff2") format("woff2"),
+	url("../font/MediumH.woff") format("woff");
+}

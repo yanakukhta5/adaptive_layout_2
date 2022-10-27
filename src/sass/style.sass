@@ -1,0 +1,178 @@
+@import "./templates/reset.sass"
+
+$primary: #303030
+$secondary: #ffffff
+
+$sm: 576px
+$md: 768px
+$lg: 992px
+$x: 1200px
+
+@mixin bodyBackground
+ background-image: url('../img/background.png')
+ background-repeat: repeat
+
+@mixin quoteBackground
+ background: $secondary
+ background: linear-gradient(90deg, $secondary 50%, rgba(255,255,255,0) 100%)
+
+html
+ scroll-behavior: smooth
+
+._container
+ max-width: 1200px
+ width: 100%
+ padding: 0px 20px
+ margin: 0 auto
+ @media screen and (max-width: $lg) and (min-width: $md) 
+  padding: 0px 30px
+ @media screen and (max-width: 1520px)
+  overflow: hidden
+
+.svg
+ fill: $primary
+
+body
+ display: flex
+ min-height: 100vh
+ flex-direction: column
+ overflow-x: hidden
+ @include bodyBackground
+
+a
+ color: $primary
+
+.title
+ font-family: 'Boldh'
+ color: $primary
+ font-weight: 550
+ font-style: normal
+ text-transform: uppercase
+ line-height: 110%
+
+p, li
+ font-family: 'LightH'
+ font-size: 18px
+ line-height: 145%
+ color: $primary
+ margin-bottom: 20px
+ @media screen and (max-width: $md)
+  font-size: 20px
+ @media screen and (max-width: $sm)
+  font-size: 14px
+
+.quote
+ @include quoteBackground
+ font-family: 'Bolditalic'
+ padding: 22px 30px 22px 47px
+ @media screen and (max-width: $sm)
+  padding: 22px 10px 22px 20px
+ @media screen and (max-width: $x)
+  width: 80vw
+
+.section
+ margin: 200px 0px
+ @media screen and (max-width: $lg)
+  margin: 170px 0px
+ @media screen and (max-width: $md)
+  margin: 140px 0px
+ @media screen and (max-width: $sm)
+  margin: 120px 0px
+ &:last-of-type
+  margin: 100px 0px
+  @media screen and (max-width: $lg)
+    margin: 85px 0px
+  @media screen and (max-width: $md)
+    margin: 70px 0px
+  @media screen and (max-width: $sm)
+    margin: 60px 0px
+ &:first-of-type
+  margin-top: 0px
+
+.section-title
+ font-size: 60px
+ margin-bottom: 80px
+ @media screen and (max-width: $lg)
+  font-size: 44px
+  margin-bottom: 60px
+ @media screen and (max-width: $md)
+  font-size: 40px
+  margin-bottom: 50px
+ @media screen and (max-width: $sm)
+  font-size: 30px
+  margin-bottom: 30px
+ &__span
+  font-family: 'Lightitalic'
+
+.primary-button
+ width: fit-content
+ height: fit-content
+ background-color: $primary
+ color: $secondary
+ border: 0px
+ position: relative
+ text-transform: uppercase
+ padding: 26px 40px
+ font-size: 14px
+ z-index: 2
+ cursor: pointer
+ margin-left: 10px
+ &::after
+  content: ' →'
+  padding-left: 10px
+ &::before
+  content: ''
+  top: -10px
+  left: -10px
+  position: absolute
+  background-color: transparent
+  width: 100%
+  height: 100%
+  border: 1px solid $primary
+  z-index: 1
+  transition: all 0.3s ease
+ &:hover
+  &::before
+   top: 0px
+   left: 0px
+ @media screen and (max-width: $sm)
+  padding: 24px 30px
+
+.secondary-button
+ width: fit-content
+ height: fit-content
+ cursor: pointer
+ background-color: $secondary
+ color: $primary
+ text-transform: uppercase
+ padding: 26px 50px
+ border: 1px solid $primary
+ color: $primary
+ @media screen and (max-width: $sm)
+  padding: 24px 50px
+
+.slider-arrow
+ border: none
+ background-color: none
+ color: $primary
+ font-size: 20px
+ cursor: pointer
+ padding: 10px
+ &:disabled
+  opacity: 0.5
+
+.arrow-next
+ &::before
+  content: '→'
+
+.arrow-prev
+ &::before
+  content: '←'
+
+@import "./templates/header.sass"
+@import "./templates/main.sass"
+@import "./templates/our.sass"
+@import "./templates/advantages.sass"
+@import "./templates/prises.sass"
+@import "./templates/contact.sass"
+@import "./templates/footer.sass"
